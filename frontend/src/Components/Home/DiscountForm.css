@@ -1,0 +1,185 @@
+.discount-form-container {
+  max-width: 1360px;
+  width: 100%;
+  background: linear-gradient(261deg, #0B710B 32.63%, #393 98.96%);
+  padding: 20px; 
+  box-sizing: border-box; 
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+}
+
+.first-oder-h1 {
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 110%; 
+  padding-top: 32px;
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.container-img-input {
+  width: 100%;
+  max-width: 1296px; 
+  display: flex;
+  justify-content:space-between; 
+  margin-top: 24px;
+  gap: 10px;
+}
+
+.input-form {
+  width: 100%; 
+  max-width: 516px;
+  height: 296px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.input-g {
+  width: 100%; 
+  max-width: 516px;
+  height: 58px;
+  padding: 10px 32px;
+  background: linear-gradient(261deg, #0B710B 32.63%, #393 98.96%);
+  border-radius: 6px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.input-g::placeholder {
+  color: #FFF;
+}
+
+.button-discount {
+  width: 100%;
+  max-width: 516px;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  background: #FFF;
+  border: none;
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 32px;
+}
+
+.discount-image {
+  position: static;
+  width: 100%;
+  max-width: 748px;
+  height: 360px;
+  background-image: url(./discount_form.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex: none;
+margin-bottom: -20px;
+}
+
+
+
+
+/* Медиа-запросы для адаптации на разные экраны */
+@media (min-width: 1440px) {
+  .discount-form-container {
+    padding: 20px 40px;
+    max-width: 1200px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width:1440px) {
+  .discount-image {
+    width: 100%;
+    max-width: 620px;
+    height: 308px;
+  }
+  .input-form{
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .discount-image {
+    max-width: 620px;
+    width: 100%;
+    height: 308px;
+    margin-left: -170px;
+    margin-top: 50px;
+  }
+  .input-form{
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .discount-form-container {
+    max-width: 840px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .container-img-input{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;  
+}
+  .discount-image{
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .discount-form-container {
+    max-width: 840px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .container-img-input{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .discount-image{
+    margin-top: 50px;
+  }
+
+}
+@media (max-width: 360px) {
+  .discount-form-container {
+    max-width: 840px;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .container-img-input{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .discount-image{
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,54 @@
+.random-products-container {
+  max-width: 1360px;
+  margin-top: 20px;
+  margin: 0 auto;
+}
+.tools-h2{
+  padding-left: 50px;
+  color: rgb(40, 40, 40);
+font-family: Montserrat;
+font-size: 64px;
+font-weight: 700;
+
+width: 1360px;
+height: 70px;
+display: flex;
+justify-content: flex-start;
+align-items: flex-start;
+margin: 40px 0px;
+}
+.container {
+  max-width: 1360px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.categories-text {
+  color: rgb(40, 40, 40);
+font-family: Montserrat;
+font-size: 64px;
+font-weight: 700;
+line-height: 110%;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.line {
+  height: 1px;
+  max-width: 1093px;
+  width: 100%;
+  background-color: #DDD;
+  flex-grow: 1;
+}
+
+.all-text {
+  color: rgb(139, 139, 139);
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
