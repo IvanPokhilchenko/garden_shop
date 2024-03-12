@@ -1,40 +1,43 @@
-const Category = require('../database/models/category');
-const Product = require('../database/models/product');
-
-const { request } = require('express');
 const express = require('express');
+const cors = require('cors');
+const sequelize = require('./database/database');
+const categories = require('./routes/categories');
+const sale = require('./routes/sale');
+const order = require('./routes/order');
+const products = require('./routes/products');
+const Category = require('./database/models/category');
+const Product = require('./database/models/product');
 
-const router = express.Router();
+const PORT = process.env.PORT || 3001;
 
+const app = express();
+app.use(express.static('public'));
+app.use(cors({ origin: '*' }));
+app.use(express.urlencoded());
+app.use(express.json());
 
-router.get('/all', (req, res) =>{
-    
-    async function all(){
-        const all = await Category.findAll();
-        res.json(all);
-    }
-    all();
-})
+// Объединяем маршруты для вашего API
+app.get('/api', (req, res) => {
+  res.json({ message: "Hello from backend express" });
+});
 
-router.get('/:id', async (req, res) =>{
-    const {id} = req.params;
+app.use('/categories', categories);
+app.use('/products', products);
+app.use('/sale', sale);
+app.use('/order', order);
 
-    if (isNaN(id)){
-        res.json({status: 'ERR', message: 'wrong id'}); 
-        return  
-    }
-    const all = await Product.findAll({where: {categoryId: +id}});
-    const category = await Category.findOne({where: {id: +id}});
+Category.hasMany(Product);
 
-    if(all.length === 0){
-        res.json({status: 'ERR', message: 'empty category'});
-        return
-    }
-    
-    res.json({
-        category,
-        data: all
+// Объединяем слушатель порта
+const startServer = async () => {
+  try {
+    await sequelize.sync();
+    app.listen(PORT, () => {
+      console.log(`Server started on port ${PORT}`);
     });
-})
+  } catch (err) {
+    console.error('Unable to start server:', err);
+  }
+};
 
-module.exports = router;
+startServer();
