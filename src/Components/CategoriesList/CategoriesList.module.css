@@ -1,0 +1,122 @@
+.categories_lists {
+  width: 1360px;
+  width: 100%;
+  /* margin: 40px 40px 80px 40px; */
+  display: grid;
+  grid-template-columns: repeat(4, 248px);
+  gap: 20px 16px;
+  justify-content: center;
+}
+
+.category_item {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.img_wrapper {
+  aspect-ratio: 248 / 392;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.img_wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--hover-time) ease;
+}
+
+.category_title {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Медиа-запросы для адаптации на разные экраны */
+@media (min-width: 1440px) {
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 1000px) and (max-width:1440px) {
+  .categories_lists {
+    display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  }
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .categories_lists {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  }
+  .img_wrapper{
+    max-width: 354px;
+    width: 100%;
+    height: 250px;
+  }
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .categories_lists {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0px;
+  }
+  .img_wrapper{
+    max-width: 210px;
+    width: 100%;
+    height: 260px;
+  }
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+  .categories_lists {
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0px;
+  }
+  .img_wrapper{
+    max-width: 320px;
+    width: 100%;
+    height: 220px;
+  }
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+
+}
+@media (max-width: 360px) {
+  .categories_lists {
+    display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0px;
+  }
+  .img_wrapper{
+    max-width: 320px;
+    width: 100%;
+    height: 220px;
+  }
+  .category_item:hover .img_wrapper img {
+    transform: scale(1.1);
+  }
+}

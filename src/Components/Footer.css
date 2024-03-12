@@ -1,0 +1,136 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 0;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+.footer-h1 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: left;
+  margin-left: 20px;
+
+}
+
+.footer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer-h3 {
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-weight: 500;
+  color: #8b8b8b;
+  margin-bottom: 5px;
+}
+
+.card {
+    flex: 1 1 calc(50% - 10px);
+    background-color: #f1f3f4;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  
+}
+
+.social {
+  width: 40px;
+  height: 40px;
+  background-size: cover;
+}
+.social-image {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.social-whatsapp {
+  background-image: url(./icon/ic-whatsapp.png);
+  background-repeat: no-repeat;
+}
+.social-instagram {
+  background-image: url(./icon/Insta.png);
+  background-repeat: no-repeat;
+}
+.maps-container {
+  max-width:1200px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.map {
+  width: 100%;
+  height: 200px;
+
+}
+
+.map.full-width {
+  flex: 1 0 100%;
+  margin-right: 0;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 50%;
+  }
+  .maps-container iframe {
+    max-width: 1000px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+    min-width: auto;
+  }
+  .maps-container iframe {
+    max-width: 760px;
+    width: 100%;
+    height: 200px;
+  }
+  .footer-container {
+    width: 100%;
+    padding: 20px; 
+    height: auto; 
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-h1 {
+    font-size: 20px;
+  }
+
+  .footer-h3 {
+    font-size: 16px;
+  }
+
+  .maps-container iframe {
+    max-width: 475px;
+    width: 100%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-h1 {
+    font-size: 18px;
+  }
+
+  .footer-h3 {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}

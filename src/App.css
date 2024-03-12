@@ -1,0 +1,77 @@
+* {
+  --white-color: #fff;
+  --white-light-color: rgba(255, 255, 255, 0.4);
+
+  --head-color: #a1e2eb;
+  --ui-color: #339933;
+  --ui-light-color: #59c859;
+  --ui-button-color: #f1fff1;
+  --brand-linear: linear-gradient(to bottom, #a1e2eb 0%, #a4ea9f 100%);
+  --ui-linear: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%);
+  --accent-color: #ff32a1;
+  --error-color: rgb(240, 0, 0);
+
+  --a7-color: #a7a7a7;
+  --c0-color: #c0c0c0;
+  --c0-light-color: #c0c0c0;
+  --blur-color: #d8eed3ee;
+  --92-color: #929292;
+  --8b-color: #8b8b8b;
+  --6c-color: #6c6c6c;
+  --3a-color: #3a3a3a;
+  --2d-color: #2d2d2d;
+
+  --black-color: #000;
+
+  --hover-time: 0.4s;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+@media (min-width: 1600px) {
+  body {
+    padding: 0 60px;
+  }
+}
+
+/* ========= alert window ====== */
+
+.alert-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.alert-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.alert-exit {
+  opacity: 1;
+}
+
+.alert-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}

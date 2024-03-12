@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+.discount {
+  width: 100%;
+  max-width: 1360px;
+  height: 600px;
+  background-image: url(./img.jpg);
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  position: relative; 
+  margin-bottom: 80px;
+}
+.amazing-text{
+  width: 100%;
+  max-width: 1360px;
+  color:  #FFF;
+  font-family: Montserrat;
+  font-size: 96px;
+  line-height: 110%;
+  padding-top: 80px;
+  padding-left: 40px;
+  margin-bottom: 40px;
+}
+
+.check-out {
+  position: absolute; 
+  padding: 16px 56px;
+  padding: 16px 56px;
+  border-radius: 6px;
+  background: #393;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%; 
+  margin-left: 40px;
+  border: none;
+}
+
+/* Медиа-запросы для адаптации на разные экраны */
+@media (max-width: 1440px) {
+  .amazing-text {
+    font-size: 80px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .amazing-text {
+    font-size: 60px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .amazing-text {
+    font-size: 40px;
+    padding-left: 0;
+  }
+  .check-out{
+    left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discount {
+    height: 400px;
+  }
+  .check-out{
+    left: 0px;
+  }
+
+  .amazing-text {
+    font-size: 30px;
+    padding-top: 40px;
+  }
+
+  .check-out {
+    margin-left: 5px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .discount {
+    height: 300px;
+  }
+
+  .amazing-text {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+
+  .check-out {
+    top: 100px;
+    margin-left: 5px;
+    font-size: 16px;
+  }
+}

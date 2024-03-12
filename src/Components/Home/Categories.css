@@ -1,0 +1,99 @@
+
+.containers {
+  width: 100%;
+  max-width: 1360px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  margin: 0 auto;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+.cont{
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+}
+.categories-text {
+  color: #282828;
+  font-family: Montserrat;
+  font-size: 64px;
+  line-height: 110%;
+  font-weight: 700;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #ddd;
+  margin-left: 32px;
+}
+
+.all-text{
+  width: 200px;
+  color: #8b8b8b;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 126%;
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+}
+
+.all-texts {
+  display: none; /* Начально скрыто, может быть переопределено для адаптации */
+}
+
+
+
+/* Медиа-запросы для адаптации на разные экраны */
+@media (min-width: 1440px) {
+  .container{}
+  .categories-text{}
+  .line{}
+  .all-text{}
+}
+
+@media (min-width: 1000px) and (max-width:1440px) {
+  
+
+}
+@media (min-width: 768px) and (max-width: 1000px) {
+  .categories-text{}
+  .line{}
+  .all-text{}
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 360px) and (max-width: 480px) {
+ 
+
+}
+@media (max-width: 360px) {
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .containers {
+    display: flex;
+    flex-direction: column;
+  }
+  .categories-text {
+    order: 0;
+  }
+  .container {
+    order: 1;
+  }
+  .all-text {
+    order: 2;
+  }
+  .line {
+    display: none;
+  }
+
+}
+

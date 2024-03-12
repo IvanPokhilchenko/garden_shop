@@ -1,0 +1,10 @@
+@font-face {
+	font-family: 'Montserrat';
+	src:
+		url('./Montserrat-Medium.woff') format('woff'),
+		url('./Montserrat-Medium.woff2') format ('woff2'),
+		url('./Montserrat-SemiBold.woff') format('woff'),
+		url('./Montserrat-SemiBold.woff2') format ('woff2'),
+		url('./Montserrat-Bold.woff') format('woff'),
+		url('./Montserrat-Bold.woff2') format ('woff2'),
+}
