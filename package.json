@@ -2,6 +2,7 @@
   "name": "garden_products",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://backend-pyf5.onrender.com",
   "dependencies": {
     "@react-google-maps/api": "^2.19.2",
     "@testing-library/jest-dom": "^5.17.0",
